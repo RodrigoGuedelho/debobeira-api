@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+   debobeira-api:
+    image: openjdk
+    container_name: debobeira-api
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    restart: always
