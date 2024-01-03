@@ -1,0 +1,24 @@
+Table group {
+  id uuid [primary key]
+  name varchar(70)
+  createdat timestamp
+  updatedat timestamp
+}
+
+Table user {
+  id uuid [primary key]
+  name varchar(70)
+  status varchar(20)
+  createdat timestamp
+  updatedat timestamp
+}
+
+Table user_group {
+  id uuid [primary key]
+  user_id uuid [ref: > user.id]
+  group_id uuid [ref: > group.id]
+  status varchar(20)
+  role varchar(20)
+  createdat timestamp
+  updatedat timestamp
+}
